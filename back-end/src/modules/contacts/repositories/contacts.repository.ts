@@ -5,7 +5,7 @@ import { UpdateContactDto } from "../dto/update-contact.dto";
 
 
 export abstract class ContactsRepository{
-    abstract create(data:CreateContactDto): Promise <Contact>
+    abstract create(data:CreateContactDto, userId:number): Promise <Contact>
     abstract findAll(): Promise<Contact[]>
     abstract findOne(id:number): Promise<Contact>
     abstract update (id:number, data:UpdateContactDto):Promise<Contact>

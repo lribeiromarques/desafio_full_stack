@@ -8,7 +8,7 @@ import { Injectable } from "@nestjs/common";
 @Injectable()
 export class ContactsPrismaRepository implements ContactsRepository{
     constructor(private prisma:PrismaService){}
-    async create(data:CreateContactDto): Promise<Contact>{
+    async create(data:CreateContactDto, userId:number): Promise<Contact>{
         const contact = new Contact()
         Object.assign(contact,{
             ...data
@@ -18,7 +18,7 @@ export class ContactsPrismaRepository implements ContactsRepository{
                 fullName:data.fullName,
                 email:data.email,
                 telephone:data.telephone,
-                userId:data.userId
+                userId
             }
         })
         return newContact
