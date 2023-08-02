@@ -32,7 +32,7 @@ export const Dashboard = () =>{
         <>
             <h1>dashboard</h1>
             <form onSubmit={handleSubmit(registerClient)}>
-            <label htmlFor="name">Nome</label>
+                <label htmlFor="name">Nome</label>
                 <input type="text"{...register("fullName")} />
                 <label htmlFor="email">Email</label>
                 <input type="email"{...register("email")} />
