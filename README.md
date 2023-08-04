@@ -13,6 +13,9 @@
     DATABASE_URL="postgresql://user:password@host:port/db?schema=public"
     SECRET_KEY =
 
+    #COMANDO PARA RODAR MIGRATIONS:
+    npx prisma migrate dev
+
     #ROTAS BACKEND:
     @USERS
     post = /users
